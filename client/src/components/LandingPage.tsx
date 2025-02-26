@@ -1,4 +1,4 @@
-import { Button, Grid2 } from '@mui/material'
+import { Button, Grid2, Link } from '@mui/material'
 
 export default function LandingPage() {
     return (
@@ -14,6 +14,7 @@ export default function LandingPage() {
                 height: { xs: '25vh', md: '50vh' },
                 borderRadius: '10px',
             }} >
+            <Link href="#reservation">
             <Button sx={{
                 opacity:1.0,
                 backgroundColor: 'rgba(205, 152, 123, 0.7)',
@@ -37,6 +38,7 @@ export default function LandingPage() {
                 variant="outlined">
                 REZERVACIJE
             </Button>
+            </Link>
         </Grid2>
     )
 }
