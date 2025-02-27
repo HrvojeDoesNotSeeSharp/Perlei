@@ -1,6 +1,6 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Grid2 } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 
 export default function StandardImageList() {
   return (
@@ -13,6 +13,9 @@ export default function StandardImageList() {
         alignItems: "center",
         marginTop: "5%"
       }}>
+      <Typography variant="h4" gutterBottom>
+        Galerija
+      </Typography>
       <Grid2 size={11} sx={{ display: { xs: 'none', md: 'grid' } }} maxWidth="xl">
         <ImageList cols={3} gap={9}>
           {itemData.map((item) => (
@@ -22,7 +25,7 @@ export default function StandardImageList() {
                 src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
                 alt={item.title}
                 loading="lazy"
-                style={{borderRadius:'10px'}}
+                style={{ borderRadius: '10px' }}
               />
             </ImageListItem>
           ))}

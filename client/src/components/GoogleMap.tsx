@@ -1,7 +1,5 @@
-import { useCallback, useState } from 'react';
 import {
   AdvancedMarker,
-  AdvancedMarkerProps,
   APIProvider,
   InfoWindow,
   Map,
@@ -18,7 +16,7 @@ const App = () => {
   };
 
   return (
-    <div style={{ height: "40vh", width: "100%" }}>
+    <div style={{ height: "283px", width: "100%" }}>
       <APIProvider apiKey={'AIzaSyAtVE7BWxTh-k_9qZWJXLEHWcTgPHeAYLc'}>
         <Map
           mapId={'bf51a910020fa25a'}
@@ -40,7 +38,6 @@ const App = () => {
               glyphColor='#0f677a'
             />
           </AdvancedMarker>
-          <style type="text/css"></style>
             <InfoWindow
               anchor={marker}
               pixelOffset={[0, -2]}>
@@ -53,26 +50,6 @@ const App = () => {
   );
 };
 
-export const AdvancedMarkerWithRef = (
-  props: AdvancedMarkerProps & {
-    onMarkerClick: (marker: google.maps.marker.AdvancedMarkerElement) => void;
-  }
-) => {
-  const { children, onMarkerClick, ...advancedMarkerProps } = props;
-  const [markerRef, marker] = useAdvancedMarkerRef();
 
-  return (
-    <AdvancedMarker
-      onClick={() => {
-        if (marker) {
-          onMarkerClick(marker);
-        }
-      }}
-      ref={markerRef}
-      {...advancedMarkerProps}>
-      {children}
-    </AdvancedMarker>
-  );
-};
 
 export default App;

@@ -1,12 +1,12 @@
-import { Button, Grid2, Link } from '@mui/material'
+import { Button, Container, Grid2, Link } from '@mui/material'
 
 export default function LandingPage() {
     return (
-        <Grid2 id="landing" size={12} maxWidth={'xl'}
+        <Grid2 id="landing" size={12} maxWidth={'xl'} sx={{position:'relative'}}> 
+        <Container maxWidth={'xl'}
             sx={{
                 mt: "2%",
                 flexGrow: 1,
-                //backgroundImage: "url('/images/nailRoom.jpg')",
                 backgroundImage: 'radial-gradient(farthest-side, rgba(255, 255, 255, 0.1) 50%, rgb(255, 255, 255, 0.85)), url("/images/hm.avif")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -28,8 +28,9 @@ export default function LandingPage() {
                 padding: "18px 36px",
                 fontSize: "22px",
                 fontFamily: 'cursive',
-                top:'50%',
+                top:'40%',
                 left:'50%',
+                transform: 'translateX(-50%)',
                 ':hover': {
                       bgcolor: 'rgba(205, 152, 123, 1)', // theme.palette.primary.main
                       color: 'white'}
@@ -39,6 +40,7 @@ export default function LandingPage() {
                 REZERVACIJE
             </Button>
             </Link>
+        </Container>
         </Grid2>
     )
 }
