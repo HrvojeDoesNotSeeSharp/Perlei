@@ -43,5 +43,6 @@
     "typescript-eslint": "^8.22.0",
     "vite": "^6.1.0",
     "vite-plugin-mkcert": "^1.17.6"
-  }
+  },
+  "build": "next build && rm -rf ./.next/cache"
 }
