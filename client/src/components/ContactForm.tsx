@@ -15,7 +15,7 @@ const ContactForm: React.FC = () => {
 
 
     emailjs
-      .sendForm('service_lkitsns', 'contact_form', form.current, {
+      .sendForm('service_lkitsns', 'contact_form', form.current!, {
         publicKey: 'M6oXjQT1zlhXx-pAn',
       })
       .then(
@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
         },
       );
 
-    form.current.reset();
+    form.current!.reset();
   };
 
 
