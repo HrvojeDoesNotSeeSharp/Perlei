@@ -5,6 +5,7 @@ import ContactForm from './ContactForm';
 import NavBar from './NavBar';
 import LandingPage from './LandingPage';
 import { Divider, Grid2 } from '@mui/material';
+import Footer from './Footer';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Divider orientation="vertical" variant="middle" flexItem />
       <Gallery />
       <ContactForm />
+      <Footer />
       
     </Grid2>
 

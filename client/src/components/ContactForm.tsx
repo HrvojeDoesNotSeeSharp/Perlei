@@ -1,11 +1,11 @@
 import React, { FormEvent, useRef } from 'react';
 import { Container, Typography, TextField, Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
-import dayjs from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import 'dayjs/locale/de';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers';
+import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 
 const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -30,11 +30,30 @@ const ContactForm: React.FC = () => {
     form.current!.reset();
   };
 
+  const disableWeekends = (date: Dayjs) => {
+    return date.get('day') === 0 || date.get('day') === 6;
+  };
 
+  const nineAM = dayjs().set('hour', 9).startOf('hour');
+  const fivePM = dayjs().set('hour', 17).startOf('hour');
+
+  const today = dayjs().get('day') === 0 ?
+    dayjs().add(1, 'day').set('hour', 9).startOf('hour') :
+      dayjs().get('day') === 6 ?
+      dayjs().add(1, 'day').set('hour', 9).startOf('hour') :
+    dayjs();
+  
+  const today7 = dayjs().get('day') === 0 ?
+  dayjs().add(8, 'day').set('hour', 9).startOf('hour') :
+    dayjs().get('day') === 6 ?
+    dayjs().add(8, 'day').set('hour', 9).startOf('hour') :
+  dayjs().add(8, 'day');
+
+  const defaultDateTime = dayjs().add(1, 'day').set('hour', 9).startOf('hour');
 
   return (
     <Container id="reservation" style={{ padding: '20px 0' }}>
-      <Typography variant="h4" gutterBottom>
+      <Typography align="center" variant="h4" gutterBottom>
         Rezervacija
       </Typography>
       <form ref={form} noValidate autoComplete="off" onSubmit={sendEmail}>
@@ -53,7 +72,15 @@ const ContactForm: React.FC = () => {
           name="email"
         />
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="de">
-          <DatePicker name="date" label="Datum Rezervacije" defaultValue={dayjs('2022-04-17')} />
+          <DateTimePicker
+            shouldDisableDate={disableWeekends}
+            minDate={today}
+            maxDate={today7}
+            minTime={nineAM}
+            maxTime={fivePM}
+            name="date"
+            label="Datum Rezervacije"
+            defaultValue={defaultDateTime} />
         </LocalizationProvider>
         <TextField
           label="Poruka"
@@ -71,5 +98,5 @@ const ContactForm: React.FC = () => {
     </Container>
   );
 };
-
+//'2022-04-17T00:00:00'
 export default ContactForm;
