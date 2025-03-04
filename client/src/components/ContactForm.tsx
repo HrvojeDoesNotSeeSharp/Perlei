@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 import dayjs, { Dayjs } from 'dayjs'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import 'dayjs/locale/de';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 
 const ContactForm: React.FC = () => {
@@ -65,14 +64,22 @@ const ContactForm: React.FC = () => {
           name="ime"
         />
         <TextField
+          label="Broj mobitela"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          name="mobitel"
+        />
+        <TextField
           label="Email"
           variant="outlined"
           fullWidth
           margin="normal"
           name="email"
         />
-        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="de">
+        <LocalizationProvider  dateAdapter={AdapterDayjs} adapterLocale="de">
           <DateTimePicker
+            sx={{marginTop: '16px', marginBottom: '8px'}}
             shouldDisableDate={disableWeekends}
             minDate={today}
             maxDate={today7}

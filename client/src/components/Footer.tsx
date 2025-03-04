@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Typography, IconButton, Grid2 } from "@mui/material";
 import { Facebook, Instagram } from "@mui/icons-material";
 

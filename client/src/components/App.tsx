@@ -18,9 +18,10 @@ const App: React.FC = () => {
       }}>
       <NavBar />
       <LandingPage />
-      <AboutUs />
+      
       <Divider orientation="vertical" variant="middle" flexItem />
       <Gallery />
+      <AboutUs />
       <ContactForm />
       <Footer />
       

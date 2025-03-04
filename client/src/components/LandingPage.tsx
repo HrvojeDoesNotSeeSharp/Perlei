@@ -7,7 +7,7 @@ export default function LandingPage() {
             sx={{
                 mt: "2%",
                 flexGrow: 1,
-                backgroundImage: 'radial-gradient(farthest-side, rgba(255, 255, 255, 0.1) 50%, rgb(255, 255, 255, 0.85)), url("/images/hm.avif")',
+                backgroundImage: 'radial-gradient(farthest-side, rgba(255, 255, 255, 0.1) 50%, rgb(255, 255, 255, 0.85)), url("/images/ofis1.jpg")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: 'center center',
