@@ -21,8 +21,8 @@ const App: React.FC = () => {
       
       <Divider orientation="vertical" variant="middle" flexItem />
       <Gallery />
-      <AboutUs />
       <ContactForm />
+      <AboutUs />
       <Footer />
       
     </Grid2>

@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
       }}>
       <Grid2 size={{ xs: 12, md: 6 }} padding={'20px'} >
         <Paper elevation={1} sx={{
-          backgroundColor: '	#F0F0F0',
+          backgroundColor: 'rgb(255, 255, 255)',
           paddingTop: 2,
           paddingBottom: 2
         }}>

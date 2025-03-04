@@ -38,20 +38,20 @@ const ContactForm: React.FC = () => {
 
   const today = dayjs().get('day') === 0 ?
     dayjs().add(1, 'day').set('hour', 9).startOf('hour') :
-      dayjs().get('day') === 6 ?
-      dayjs().add(1, 'day').set('hour', 9).startOf('hour') :
-    dayjs();
-  
-  const today7 = dayjs().get('day') === 0 ?
-  dayjs().add(8, 'day').set('hour', 9).startOf('hour') :
     dayjs().get('day') === 6 ?
+      dayjs().add(1, 'day').set('hour', 9).startOf('hour') :
+      dayjs();
+
+  const today7 = dayjs().get('day') === 0 ?
     dayjs().add(8, 'day').set('hour', 9).startOf('hour') :
-  dayjs().add(8, 'day');
+    dayjs().get('day') === 6 ?
+      dayjs().add(8, 'day').set('hour', 9).startOf('hour') :
+      dayjs().add(8, 'day');
 
   const defaultDateTime = dayjs().add(1, 'day').set('hour', 9).startOf('hour');
 
   return (
-    <Container id="reservation" style={{ padding: '20px 0' }}>
+    <Container id="reservation" sx={{ padding: '20px 0', backgroundColor: 'rgba(250, 242, 232, 0.7)' }} >
       <Typography align="center" variant="h4" gutterBottom>
         Rezervacija
       </Typography>
@@ -77,9 +77,9 @@ const ContactForm: React.FC = () => {
           margin="normal"
           name="email"
         />
-        <LocalizationProvider  dateAdapter={AdapterDayjs} adapterLocale="de">
+        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="de">
           <DateTimePicker
-            sx={{marginTop: '16px', marginBottom: '8px'}}
+            sx={{ marginTop: '16px', marginBottom: '8px' }}
             shouldDisableDate={disableWeekends}
             minDate={today}
             maxDate={today7}
@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
           name="poruka"
         />
         <Button variant="contained" color="primary" type="submit">
-          Submit
+          Pošalji
         </Button>
       </form>
     </Container>
