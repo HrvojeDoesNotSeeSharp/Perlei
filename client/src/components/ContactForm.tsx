@@ -5,6 +5,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import 'dayjs/locale/de';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -98,7 +99,7 @@ const ContactForm: React.FC = () => {
           rows={4}
           name="poruka"
         />
-        <Button variant="contained" color="primary" type="submit">
+        <Button startIcon={<EmailOutlinedIcon/>} variant="contained" color="primary" type="submit" sx={{left:'40%', width:'20%'}}>
           Pošalji
         </Button>
       </form>
