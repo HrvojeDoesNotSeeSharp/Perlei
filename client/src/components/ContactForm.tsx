@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
           rows={4}
           name="poruka"
         />
-        <Button startIcon={<EmailOutlinedIcon/>} variant="contained" color="primary" type="submit" sx={{left:'40%', width:'20%'}}>
+        <Button startIcon={<EmailOutlinedIcon/>} variant="contained" color="primary" type="submit" sx={{left:{xs:'35%', md:'40%'}, width:{xs:'30%', md:'20%'}}}>
           Pošalji
         </Button>
       </form>

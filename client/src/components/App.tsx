@@ -1,11 +1,12 @@
 import React from 'react';
-import Gallery from './Gallery';
 import ContactForm from './ContactForm';
 import NavBar from './NavBar';
 import LandingPage from './LandingPage';
 import { Divider, Grid2 } from '@mui/material';
 import Footer from './Footer';
 import AboutUs1 from './AboutUs1';
+import Usluge from './Usluge';
+
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const App: React.FC = () => {
       <LandingPage />
       
       <Divider orientation="vertical" variant="middle" flexItem />
-      <Gallery />
+      <Usluge />
       <ContactForm />
       <AboutUs1 />
       <Footer />
