@@ -12,11 +12,11 @@ const AboutUs: React.FC = () => {
       sx={{
         justifyContent: "center",
         alignItems: "center",
-        mt: "2%",
-        mb: "4%",
+        mt: {xs:"6%", md:"3%"},
+        mb: {xs:"6%", md:"4%"},
         flexDirection: { xs: "column", md: 'row' }
       }}>
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={20}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{xs:5, md:20}}>
         <Card sx={{
           borderStyle: 'solid', borderWidth: 'thin', borderColor: '#E0E0E0',transition: 'transform .3s ease-out',
           ':hover': {
@@ -26,7 +26,7 @@ const AboutUs: React.FC = () => {
           }
         }}>
           <CardActionArea
-            href="#text-buttons"
+            href="tel:00385996807878"
             sx={{ padding: 2, display: 'inline-flex' }}>
             <CardContent>
               <PhoneInTalkTwoToneIcon sx={{ width: 60, height: 60 }} />
@@ -46,7 +46,7 @@ const AboutUs: React.FC = () => {
           }
         }}>
           <CardActionArea
-            href="#text-buttons"
+            href="https://www.google.com/maps/dir/43.5060392,16.4994892/Janjevska+ul.+23,+21000,+Split"
             sx={{ padding: 2, display: 'inline-flex' }}>
             <CardContent>
               <LocationOnOutlinedIcon sx={{ width: 60, height: 60 }} />

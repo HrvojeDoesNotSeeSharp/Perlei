@@ -52,18 +52,15 @@ export default function Usluge() {
                     </Container>
 
                 </Grid2>
-                <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: {xs:5}}} textAlign={"justify"}>
-                    <Typography>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: {xs:5, md:1}}} textAlign={"justify"}>
+                    <Typography gutterBottom sx={{fontSize: {xs:'16px', md:'22px'}}}>
+                        Salon nudi profesionalne usluge od geliranja i korekcije noktiju, trajnog laka, gradivnog trajnog laka, nail arta, ukrasavanja sljokicama, chrome, ugranje na sablone,
+                        babyboomer, dual nail forme, skidanja gela, trajnog laka, popravaka, sve do estetske manikure i njege stopala.
+                    </Typography>
+                    <Typography gutterBottom sx={{fontSize: {xs:'16px', md:'22px'}}}>
+                        Posvecenost kvaliteti i individiualiziranoj njezi svakog klijenta i klijentice.
+                        Pracenje trendova u nail industriji i intenzivne edukacije kako bi tretman bio sto bolje prilagoden svakom klijentu.
+                        Visoka kvaliteta, stalno usavrsavanje, peilagodavanje potrebama opisuju salon M-Per-Lei.
                     </Typography>
                 </Grid2>
             </Grid2>
