@@ -26,14 +26,14 @@ const AboutUs: React.FC = () => {
           }
         }}>
           <CardActionArea
-            href="tel:00385996807878"
+            href="tel:00385955211066"
             sx={{ padding: 2, display: 'inline-flex' }}>
             <CardContent>
               <PhoneInTalkTwoToneIcon sx={{ width: 60, height: 60 }} />
             </CardContent>
             <CardContent>
               <Typography>TELEFON</Typography>
-              <Typography>+385996807878</Typography>
+              <Typography>+385955211066</Typography>
             </CardContent>
           </CardActionArea>
         </Card>

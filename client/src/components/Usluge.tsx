@@ -54,13 +54,13 @@ export default function Usluge() {
                 </Grid2>
                 <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: {xs:5, md:1}}} textAlign={"justify"}>
                     <Typography gutterBottom sx={{fontSize: {xs:'16px', md:'22px'}}}>
-                        Salon nudi profesionalne usluge od geliranja i korekcije noktiju, trajnog laka, gradivnog trajnog laka, nail arta, ukrasavanja sljokicama, chrome, ugranje na sablone,
+                        Salon nudi profesionalne usluge od geliranja i korekcije noktiju, trajnog laka, gradivnog trajnog laka, nail arta, ukrašavanja šljokicama, chrome, ugradnje na šablone,
                         babyboomer, dual nail forme, skidanja gela, trajnog laka, popravaka, sve do estetske manikure i njege stopala.
                     </Typography>
                     <Typography gutterBottom sx={{fontSize: {xs:'16px', md:'22px'}}}>
-                        Posvecenost kvaliteti i individiualiziranoj njezi svakog klijenta i klijentice.
-                        Pracenje trendova u nail industriji i intenzivne edukacije kako bi tretman bio sto bolje prilagoden svakom klijentu.
-                        Visoka kvaliteta, stalno usavrsavanje, peilagodavanje potrebama opisuju salon M-Per-Lei.
+                        Posvećenost kvaliteti i individualiziranoj njezi svakog klijenta i klijentice.
+                        Praćenje trendova u nail industriji i intenzivne edukacije kako bi tretman bio sto bolje prilagođen svakom klijentu.
+                        Visoka kvaliteta, stalno usavršavanje, prilagođavanje potrebama opisuju salon M-Per-Lei.
                     </Typography>
                 </Grid2>
             </Grid2>
