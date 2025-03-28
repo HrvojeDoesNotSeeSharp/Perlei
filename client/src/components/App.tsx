@@ -6,7 +6,8 @@ import { Divider, Grid2 } from '@mui/material';
 import Footer from './Footer';
 import AboutUs1 from './AboutUs1';
 import Usluge from './Usluge';
-import RezUsluge from './RezUsluge';
+//import RezUsluge from './RezUsluge';
+import CheckboxTest from './CheckboxTest';
 
 
 const App: React.FC = () => {
@@ -23,7 +24,7 @@ const App: React.FC = () => {
       
       <Divider orientation="vertical" variant="middle" flexItem />
       <Usluge />
-      <RezUsluge />
+      <CheckboxTest />
       <AboutUs1 />
       <Footer />
       
