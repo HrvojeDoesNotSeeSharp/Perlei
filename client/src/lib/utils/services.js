@@ -1,4 +1,4 @@
-export const services = [
+export const serv = [
     {
         name: "Trajni Lak",
         price: 17

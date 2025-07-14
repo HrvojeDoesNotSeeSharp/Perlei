@@ -7,7 +7,22 @@ import 'dayjs/locale/de';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
-const ContactForm: React.FC = () => {
+interface ReservationNew {
+  id: string
+  name: string
+  service: string[]
+  dateOfReservation: string
+  email: string
+  phone: string
+  note: string
+}
+
+type Props = {
+  toggleSteps: ()=>void
+  reservation: ReservationNew | undefined
+}
+
+export default function ContactForm({toggleSteps, reservation}:Props) {
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -99,7 +114,7 @@ const ContactForm: React.FC = () => {
           rows={4}
           name="poruka"
         />
-        <Button startIcon={<EmailOutlinedIcon/>} variant="contained" color="primary" type="submit" sx={{left:{xs:'35%', md:'40%'}, width:{xs:'30%', md:'20%'}}}>
+        <Button onClick={toggleSteps} startIcon={<EmailOutlinedIcon/>} variant="contained" color="primary" type="submit" sx={{left:{xs:'35%', md:'40%'}, width:{xs:'30%', md:'20%'}}}>
           Pošalji
         </Button>
       </form>
@@ -107,4 +122,3 @@ const ContactForm: React.FC = () => {
   );
 };
 //'2022-04-17T00:00:00'
-export default ContactForm;
