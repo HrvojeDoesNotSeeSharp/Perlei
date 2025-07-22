@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { serv } from "../lib/utils/services";
 import { Box, Button, Checkbox, Container, FormControlLabel, Grid2, List, ListItem, Typography } from "@mui/material";
+import { serv } from "../lib/utils/services";
 
 interface ReservationNew {
     id: string

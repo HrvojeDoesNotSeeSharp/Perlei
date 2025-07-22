@@ -1,4 +1,10 @@
-export const serv = [
+export interface Service {
+  name: string;
+  price: number;
+}
+
+
+export const serv : Service[] = [
     {
         name: "Trajni Lak",
         price: 17
