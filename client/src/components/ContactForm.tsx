@@ -1,5 +1,5 @@
-import React, { FormEvent, useRef } from 'react';
-import { Container, Typography, TextField, Button, List } from '@mui/material';
+import { FormEvent, useRef } from 'react';
+import { Container, Typography, TextField, Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import dayjs, { Dayjs } from 'dayjs'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -37,9 +37,9 @@ export default function ContactForm({toggleSteps, reservation}:Props) {
             data[key] = value;
         });*/
 
-      reservation.name = form.current?.name
+      //reservation.name = form.current?.name
 
-      console.log(data);
+      //console.log(data);
 
     //const newReservation = {...data, id: data.length.toString()}
 
