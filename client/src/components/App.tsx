@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import ContactForm from './ContactForm';
+import { useState } from 'react';
 import NavBar from './NavBar';
 import LandingPage from './LandingPage';
 import { Divider, Grid2 } from '@mui/material';
 import Footer from './Footer';
 import AboutUs1 from './AboutUs1';
 import Usluge from './Usluge';
-//import RezUsluge from './RezUsluge';
 import CheckboxTest from './CheckboxTest';
 import Success from './Success';
-//import uuid from 'react-uuid';
+import ContactFormNew from './ContactFormNew';
+import dayjs from 'dayjs';
 
 interface ReservationNew {
   id: string
   name: string
   service: string[]
-  dateOfReservation: string
+  totalPrice: number
+  dateOfReservation: Date
   email: string
   phone: string
   note: string
 }
 
+
 export default function App() {
   const [reservationStep, setReservationStep] = useState(0);
 
-  const toggleSteps = () => {
-    setReservationStep(reservationStep + 1)
+  const toggleSteps = (a:number) => {
+    setReservationStep(reservationStep + a)
   }
 
-  const [reservation, setReservation] = useState<ReservationNew>();
+  const [reservation, setReservation] = useState<ReservationNew>(
+    {id:"", name:"", service:[], totalPrice:0, dateOfReservation:dayjs().toDate(), email:"",phone:"",note:""}
+  );
 
-  /*const handleReservation = (reservation:ReservationNew) => {
-    setReservation(reservation)
-  }*/
 
   return (
     <Grid2 id="main" container
@@ -53,7 +53,8 @@ export default function App() {
         setReservation={setReservation}
         toggleSteps={toggleSteps} />}
       {reservationStep === 1 &&
-        <ContactForm 
+        <ContactFormNew 
+        setReservation={setReservation}
         reservation={reservation}
         toggleSteps={toggleSteps} />}
       {reservationStep === 2 &&
